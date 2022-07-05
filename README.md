@@ -1,2 +1,3 @@
-# miprimerappreact
-mi primera aplicacion de aprendizaje en react
+# Mi Primera Aplicación de React
+
+Esta es mi primera aplicación de aprendizaje en React.js
