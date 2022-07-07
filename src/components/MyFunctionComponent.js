@@ -12,6 +12,8 @@ function MyFunctionComponent(props) {
       {props.tasks.map((t, index) => (
         <div key={index}>name: {t.name}, description: {t.description}</div>
       ))}
+      <hr/>
+      {props.children}
     </p>
   );
 

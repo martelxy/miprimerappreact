@@ -3,7 +3,8 @@ import './App.css';
 
 import {
   MyClassComponent,
-  MyFunctionComponent
+  MyFunctionComponent,
+  ComponentedeMariana
 } from './components';
 
 function ComponenteHijo({ children }) {
@@ -35,7 +36,9 @@ function App() {
           </ComponenteHijo>
         </MyClassComponent>
         
-        <MyFunctionComponent name="Jonathan" age="23" tasks={tasks}/>
+        <MyFunctionComponent name="Jonathan" age="23" tasks={tasks}>
+          <ComponentedeMariana> Mi primer componente hijo :D</ComponentedeMariana>
+        </MyFunctionComponent>
 
 
       </header>
