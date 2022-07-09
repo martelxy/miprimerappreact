@@ -30,7 +30,7 @@ function App() {
 
 
         <MyClassComponent name="Mariana" age="20" tasks={tasks}>
-          <p>Este es mi parrafo hijo</p>
+          Este es mi parrafo hijo
           <ComponenteHijo>
             Este es mi componente hijo
           </ComponenteHijo>

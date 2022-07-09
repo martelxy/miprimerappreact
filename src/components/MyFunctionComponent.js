@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function MyFunctionComponent(props) {
+function MyFunctionComponent({children, tasks,... props}) {
 
   const [ counter, setCounter ] = useState(0);
 
@@ -17,9 +17,10 @@ function MyFunctionComponent(props) {
       <div>I've been pressed {counter} times</div>
       <button onClick={incrementCounter}>Click me!!!</button>
 
-      {props.tasks.map((t, index) => (
+      {tasks.map((t, index) => (
         <div key={index}>name: {t.name}, description: {t.description}</div>
       ))}
+      {children}
     </p>
   );
 
