@@ -1,10 +1,12 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 import {
   MyClassComponent,
   MyFunctionComponent,
-  ComponentedeMariana
+  ComponentedeMariana,
+  MyCycleComponent
 } from './components';
 
 function ComponenteHijo({ children }) {
@@ -15,6 +17,8 @@ function ComponenteHijo({ children }) {
 
 function App() {
   
+  const [ montarComponente, setMontarComponente ] = useState(true);
+
   const tasks = [
     { name: "My first task", description: "A little description" }, // 0
     { name: "Another task", description: "kzmdclmdkvskvj" },        // 1
@@ -24,12 +28,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
-          <p></p>
-        </div>
 
 
-        <MyClassComponent name="Mariana" age="20" tasks={tasks}>
+        {/*<MyClassComponent name="Mariana" age="20" tasks={tasks}>
           Este es mi parrafo hijo
           <ComponenteHijo>
             Este es mi componente hijo
@@ -38,7 +39,13 @@ function App() {
         
         <MyFunctionComponent name="Jonathan" age="23" tasks={tasks}>
           <ComponentedeMariana> Mi primer componente hijo :D</ComponentedeMariana>
-        </MyFunctionComponent>
+        </MyFunctionComponent>*/}
+
+        <button onClick={() => setMontarComponente(!montarComponente)}>
+          Montar Cycle Component
+        </button>
+
+        { montarComponente && <MyCycleComponent by="Jonathan"/> }
 
 
       </header>
